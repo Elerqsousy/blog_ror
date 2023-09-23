@@ -1,0 +1,13 @@
+class Like < ApplicationRecord
+    belongs_to :user
+    belongs_to :post
+
+    after_save :update_post_likes_count
+
+    private
+
+    def update_post_likes_count
+        post_likes_count = Comment.where(post_id: :post_id).count
+        post.update(likesCounter: post_likes_count)
+    end
+end
