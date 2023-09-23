@@ -7,7 +7,7 @@ class Like < ApplicationRecord
     private
 
     def update_post_likes_count
-        post_likes_count = Comment.where(post_id: :post_id).count
+        post_likes_count = Comment.where(post_id: post_id).count
         post.update(likesCounter: post_likes_count)
     end
 end

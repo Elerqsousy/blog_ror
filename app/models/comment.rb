@@ -7,7 +7,7 @@ class Comment < ApplicationRecord
     private
 
     def update_post_comments_count
-        post_comments_count = Comment.where(post_id: :post_id).count
+        post_comments_count = Comment.where(post_id: post_id).count
         post.update(commentsCounter: post_comments_count)
     end
 end
