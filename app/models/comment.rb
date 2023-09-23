@@ -4,6 +4,7 @@ class Comment < ApplicationRecord
 
   after_create :update_post_comments_counter_on_create
   after_destroy :update_post_comments_counter_on_destroy
+
   private
 
   def update_post_comments_counter_on_create
