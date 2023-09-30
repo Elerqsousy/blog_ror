@@ -1,1 +1,12 @@
-<h1>Here is a list of posts for a given user</h1>
+<%= stylesheet_link_tag('index') %>
+<%= render 'shared/user', user:@user %>
+
+<div class="posts-index">
+  <% @posts.each do |post| %>
+    <div>
+      <h3> <%= link_to post.title, user_post_path(@user,post) %></h3>
+      <%= render 'shared/post', post: post %>
+      <%= render 'shared/comment', comments: post.recent_comments %>
+    </div>
+  <% end %>
+</div>
