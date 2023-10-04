@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.feature 'User Index Page', type: :feature do
   before do
-     @user = User.create(name: 'Lawrence McDaniel', photo: 'https://cdn.filestackcontent.com/e59vmdzRKGVwdjNKKLy0', bio: 'Lawrence McDaniel is an American full stack developer.')
+    @user = User.create(name: 'Lawrence McDaniel', photo: 'https://cdn.filestackcontent.com/e59vmdzRKGVwdjNKKLy0',
+                        bio: 'Lawrence McDaniel is an American full stack developer.')
 
     visit users_path
   end

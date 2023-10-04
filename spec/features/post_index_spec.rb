@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Post Index Page', type: :feature do
   describe 'Viewing Post Index page' do
     before(:each) do
-      @user = User.create(name: 'Lawrence McDaniel', photo: 'https://cdn.filestackcontent.com/e59vmdzRKGVwdjNKKLy0', bio: 'Lawrence McDaniel is an American full stack developer.')
+      @user = User.create(name: 'Lawrence McDaniel', photo: 'https://cdn.filestackcontent.com/e59vmdzRKGVwdjNKKLy0',
+                          bio: 'Lawrence McDaniel is an American full stack developer.')
 
       @post = Post.create(author: @user, title: 'Post 1', text: 'This is Post 1')
 
