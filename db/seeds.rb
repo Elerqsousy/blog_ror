@@ -1,7 +1,7 @@
 # Create 2 users
 
-user1 = User.create!(name: 'John Doe', photo: 'hhddudui', bio: 'I am John Doe', email: 'john@example.com', password: 'password1')
-user2 = User.create!(name: 'Jane Doe', photo: 'hhddudui', bio: 'I am John Doe', email: 'john2@example.com', password: 'password1')
+user1 = User.create!(name: 'John Doe', photo: 'hhddudui', bio: 'I am John Doe', email: 'john@example.com', email_confirmation: 'john@example.com', password: 'password1')
+user2 = User.create!(name: 'Jane Doe', photo: 'hhddudui', bio: 'I am John Doe', email: 'john2@example.com', email_confirmation: 'john2@example.com', password: 'password1')
 
 # Create 5 posts for each user
 
