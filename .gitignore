@@ -32,3 +32,6 @@
 
 # Ignoew node files
 /node_modules
+
+
+/config/database.yml

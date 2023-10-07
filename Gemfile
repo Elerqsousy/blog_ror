@@ -73,3 +73,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'actionmailer'
+gem 'devise'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
