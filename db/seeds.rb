@@ -2,7 +2,8 @@
 
 user1 = User.create!(name: 'John Doe', photo: 'hhddudui', bio: 'I am John Doe', email: 'john@example.com', password: 'password1')
 user2 = User.create!(name: 'Jane Doe', photo: 'hhddudui', bio: 'I am John Doe', email: 'john2@example.com', password: 'password1')
-
+user3 = User.create!(name: 'admin', role: 'admin', photo: 'hhddudui', bio: 'I am John Doe', email: 'admin@test.com', password: 'helloworld')
+user4 = User.create!(name: 'default', photo: 'hhddudui', bio: 'I am John Doe', email: 'default@test.com', password: 'helloworld')
 # Create 5 posts for each user
 
 user1.posts.create!(title: 'My first post', text: 'This is my first post')

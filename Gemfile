@@ -77,4 +77,4 @@ end
 gem 'actionmailer'
 gem 'devise'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-gem 'cancancan', '~> 1.9'
+gem 'cancancan'
