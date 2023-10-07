@@ -75,6 +75,6 @@ group :test do
 end
 
 gem 'actionmailer'
+gem 'cancancan'
 gem 'devise'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-gem 'cancancan'
