@@ -8,8 +8,11 @@
     <span>Comments: <%= @post.comments.count %> Likes: <%= @post.likes_counter %> </span>
   </span>
   <p> <%= @post.text %>
-    <%= form_with model: @like, url:user_post_likes_path(post_id: @post.id) do |l| %>
-      <%= l.submit  "Like", class: ["new-post-btn submit-btn"]%>
-      <% end %>
+    <%= form_with model: @like, url:user_post_likes_path(post_id: @post.id) do |f| %>
+      <%= f.submit  "Like", class: ["new-post-btn submit-btn"]%>
+    <% end %>
+    <% if can? :manage, @post %>
+  <%= button_to "Delete Post", user_post_url(@post.id), method: :delete, data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, class: ["new-post-btn submit-btn delete-btn"]%>
+  <%end%>
   <%= render 'shared/comment', comments: @comments %>
 </div>
